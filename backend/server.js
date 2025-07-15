@@ -79,16 +79,23 @@ app.post('/api/sign', async (req, res) => {
       });
     }
 
-    // Create the message hash (same as in the smart contract)
-    const messageHash = ethers.keccak256(
-      ethers.AbiCoder.defaultAbiCoder().encode(
-        ["address", "string"],
-        [recipient, tokenURI]
-      )
-    );
+    // --- REPLACE THIS BLOCK ---
+    // const messageHash = ethers.keccak256(
+    //   ethers.AbiCoder.defaultAbiCoder().encode(
+    //     ["address", "string"],
+    //     [recipient, tokenURI]
+    //   )
+    // );
+    // const signature = await wallet.signMessage(ethers.getBytes(messageHash));
+    // --- END REPLACE ---
 
-    // Sign the message
+    // --- USE THIS INSTEAD ---
+    const messageHash = ethers.solidityPackedKeccak256(
+      ["address", "string"],
+      [recipient, tokenURI]
+    );
     const signature = await wallet.signMessage(ethers.getBytes(messageHash));
+    // --- END USE ---
 
     res.json({
       signature,
