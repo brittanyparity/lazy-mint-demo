@@ -1,0 +1,31 @@
+{
+  "name": "lazy-mint-clean",
+  "version": "1.0.0",
+  "description": "A complete lazy minting NFT project with frontend and backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "dev": "concurrently \"npm run node\" \"npm run backend\" \"npm run frontend\"",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "keywords": ["nft", "lazy-mint", "ethereum", "hardhat", "react"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "hardhat": "^2.25.0",
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "dotenv": "^17.2.0",
+    "ethers": "^6.15.0"
+  }
+}
