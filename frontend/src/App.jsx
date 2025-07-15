@@ -172,6 +172,7 @@ function App() {
 
     try {
       setLoading(true);
+      console.log('Minting with:', account, tokenURI, signature);
       const tx = await contract.mint(account, tokenURI, signature);
       setTxHash(tx.hash);
       toast.info('Minting NFT... Please wait for transaction confirmation.');

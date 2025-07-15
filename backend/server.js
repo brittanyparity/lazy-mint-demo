@@ -97,6 +97,12 @@ app.post('/api/sign', async (req, res) => {
     const signature = await wallet.signMessage(ethers.getBytes(messageHash));
     // --- END USE ---
 
+    console.log('Recipient:', recipient);
+    console.log('Token URI:', tokenURI);
+    console.log('Message Hash:', messageHash);
+    console.log('Signature:', signature);
+    console.log('Signer Address:', wallet.address);
+
     res.json({
       signature,
       signerAddress: wallet.address,
@@ -104,7 +110,7 @@ app.post('/api/sign', async (req, res) => {
       recipient,
       tokenURI
     });
-
+    
   } catch (error) {
     console.error('Error generating signature:', error);
     res.status(500).json({ 
