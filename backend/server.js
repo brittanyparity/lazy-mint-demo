@@ -10,10 +10,28 @@ const PORT = process.env.BACKEND_PORT || 3001;
 
 // Security middleware
 app.use(helmet());
+
+// --- PASTE THE CORS BLOCK HERE ---
+const allowedOrigins = [
+  'https://lazy-mint-demo.vercel.app', // production
+  'http://localhost:3000',             // local dev
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true);
+    if (
+      allowedOrigins.includes(origin) ||
+      /^https:\/\/lazy-mint-demo-.*\.vercel\.app$/.test(origin)
+    ) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+// --- END CORS BLOCK ---
 
 // Rate limiting
 const limiter = rateLimit({
