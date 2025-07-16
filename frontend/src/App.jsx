@@ -14,7 +14,7 @@ function Instructions() {
       <h2>How to Use This Demo</h2>
       <div style={{paddingLeft: 15, paddingRight: 15}}>
       <ol>
-        <li>Connect your MetaMask wallet (make sure you are on the <b>Sepolia</b> testnet).</li>
+        <li>Connect your MetaMask wallet (make sure you are on the <b>Sepolia</b> testnet).[Note: To test this demo you will need ETH in your wallet. Here is a faucet where you can get ETH: <a>https://faucet.polygon.technology/</a>]</li>
         <li>Enter a Token URI (use the sample below or your own IPFS link):<br/>
           <code style={{wordBreak: 'break-all', background: '#f4f4f4', padding: '4px 8px', borderRadius: 4, display: 'block', marginTop: 8}}>
             https://ipfs.io/ipfs/bafkreie4a4mnwjhqyljfnqbxq3w36g3cocectn5v5i2fagirsjmpcld5wu
