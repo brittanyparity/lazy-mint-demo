@@ -29,7 +29,7 @@ This is a full-stack demo for a modern, gas-efficient NFT minting flow using **o
 ## 🧑‍💻 How to Use This Demo
 
 1. **Connect your MetaMask wallet** (make sure you are on the **Sepolia** testnet).
-   Note: to test this demo you will need ETH in your wallet. Here is a faucet where you can get ETH: https://faucet.polygon.technology/
+   [Note: To test this demo you will need ETH in your wallet. Here is a faucet where you can get ETH: https://faucet.polygon.technology/]
 3. **Enter a Token URI** (use the sample below or your own IPFS link):
 
    ```
