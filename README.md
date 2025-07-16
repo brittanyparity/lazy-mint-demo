@@ -29,15 +29,16 @@ This is a full-stack demo for a modern, gas-efficient NFT minting flow using **o
 ## 🧑‍💻 How to Use This Demo
 
 1. **Connect your MetaMask wallet** (make sure you are on the **Sepolia** testnet).
-2. **Enter a Token URI** (use the sample below or your own IPFS link):
+   Note: to test this demo you will need ETH in your wallet. Here is a faucet where you can get ETH: https://faucet.polygon.technology/
+3. **Enter a Token URI** (use the sample below or your own IPFS link):
 
    ```
    https://ipfs.io/ipfs/bafkreie4a4mnwjhqyljfnqbxq3w36g3cocectn5v5i2fagirsjmpcld5wu
    ```
 
-3. **Click "Generate Signature"** to get a valid signature from the backend.
-4. **Click "Mint NFT"** and confirm the transaction in MetaMask.
-5. **After minting,** a green button will appear: "Click here to view your Transaction". Click it to view your transaction on Sepolia Etherscan.
+4. **Click "Generate Signature"** to get a valid signature from the backend.
+5. **Click "Mint NFT"** and confirm the transaction in MetaMask.
+6. **After minting,** a green button will appear: "Click here to view your Transaction". Click it to view your transaction on Sepolia Etherscan.
 
 ---
 
